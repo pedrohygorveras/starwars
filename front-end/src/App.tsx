@@ -29,9 +29,11 @@ const App: React.FC = () => {
             <table className="table-auto w-full border">
               <thead>
                 <tr>
-                  <th className="border py-2 text-center px-2 max-w-8">Foto</th>
+                  <th className="border py-2 text-center px-2 max-w-14 w-14">
+                    Foto
+                  </th>
                   <th className="border py-2 text-left px-2">Nome</th>
-                  <th className="border py-2 text-center px-2 max-w-10">
+                  <th className="border py-2 text-center px-2 max-w-24 w-24">
                     Wiki
                   </th>
                 </tr>
@@ -40,7 +42,7 @@ const App: React.FC = () => {
               {starwars.map((item: any, index: number) => {
                 return (
                   <tr key={index}>
-                    <td className="border py-2 text-left px-2 max-w-8">
+                    <td className="border py-2 text-left px-2 max-w-14 w-14">
                       <img
                         src={item.image}
                         alt="picture"
@@ -48,12 +50,12 @@ const App: React.FC = () => {
                       />
                     </td>
                     <td className="border py-2 text-left px-2">{item.name}</td>
-                    <td className="border py-2 text-center px-2 max-w-10">
+                    <td className="border py-2 text-center px-2 max-w-24 w-24">
                       <a
                         href={item.wiki}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-500 hover:underline"
+                        className="text-blue-500 hover:underline text-nowrap"
                       >
                         Saiba mais
                       </a>
